@@ -1,2 +1,76 @@
 
 /* Your CSS Code here. */
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #1a1a2e 0%, #0f0f1b 100%);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container to handle layout spacing */
+.movie-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+}
+
+/* MANDATORY ELEMENT: Movie Poster Styling */
+.moviePic {
+    height: 600px;
+    width: 400px;
+    opacity: 0.85;
+    
+    /* Extra aesthetic enhancements */
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5%;
+    transition: all 0.5s ease;
+}
+
+/* Hover effect to make the poster pop */
+.moviePic:hover {
+    opacity: 1;
+    box-shadow: 0 30px 60px rgba(245, 197, 24, 0.3); /* IMDb Gold glow */
+}
+
+/* MANDATORY ELEMENT: Movie Description Styling */
+.movieDetail {
+    position: absolute;
+    top: 68%;
+    width: 60%;
+    text-align: center;
+    font-size: 1.15rem;
+
+    /* Left centering logic for absolute position */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Extra aesthetic enhancements */
+    line-height: 1.6;
+    color: #e0e0e0;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 24px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Styled Movie Title inside the paragraph */
+.movie-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #f5c518; /* Iconic IMDb Gold color */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
